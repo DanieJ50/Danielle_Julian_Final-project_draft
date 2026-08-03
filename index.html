@@ -3,284 +3,328 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Berry Vibes Studio is a playful interactive Cozy Core Diet recipe website designed by Danielle Julian.">
-  <meta name="theme-color" content="#d94c6b">
-  <title>Berry Vibes Studio | Cozy Recipe Battles</title>
+  <meta name="description" content="Berry Vibes Studio is an interactive Cozy Core Diet recipe website featuring playful food battles, craving-based discovery, and BerryBelle.">
+  <title>Berry Vibes Studio | Cozy Core Diet</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <div class="berry-sprinkles" aria-hidden="true">
-    <span>🍓</span><span>✦</span><span>🍒</span><span>♡</span><span>🍓</span><span>✧</span>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="page-decor" aria-hidden="true">
+    <span>🍓</span><span>✨</span><span>🍒</span><span>🍓</span><span>🌸</span><span>✨</span>
   </div>
 
   <header class="site-header" id="top">
-    <nav class="navbar" aria-label="Main navigation">
+    <nav class="nav-wrap" aria-label="Main navigation">
       <a class="brand" href="#home" aria-label="Berry Vibes Studio home">
-        <span class="brand-fruit" aria-hidden="true">🍓</span>
+        <span class="brand-berry" aria-hidden="true">🍓</span>
         <span>Berry Vibes Studio</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Open navigation</span>
         <span></span><span></span><span></span>
       </button>
 
       <div class="nav-links" id="nav-links">
-        <a class="nav-link active" href="#home">Home</a>
-        <a class="nav-link" href="#recipes">Recipes</a>
-        <a class="nav-link" href="#battles">Food Battles</a>
-        <a class="nav-link" href="#about">About CCD</a>
-        <a class="nav-link" href="#berrybelle">Meet BerryBelle</a>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#recipes" class="nav-link">Recipes</a>
+        <a href="#battles" class="nav-link">Food Battles</a>
+        <a href="#about" class="nav-link">About CCD</a>
+        <a href="#berrybelle" class="nav-link">Meet BerryBelle</a>
       </div>
 
-      <button class="favorites-button" id="favorites-button" type="button" aria-label="Show saved recipes">
-        <span aria-hidden="true">♡</span>
-        <span class="favorites-count" id="favorites-count">0</span>
+      <button class="heart-button" id="favorites-button" type="button" aria-label="Show favorite recipes" aria-pressed="false">
+        <span aria-hidden="true">♥</span>
+        <span class="favorite-count" id="favorite-count">0</span>
       </button>
     </nav>
   </header>
 
   <main id="main-content">
-    <section class="hero section-shell" id="home" aria-labelledby="hero-title">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Cozy recipes • playful choices • your vibe</p>
-        <h1 id="hero-title">
-          <span class="hero-small">Welcome to</span>
-          <span class="hero-big">Berry Vibes</span>
-          <span class="hero-studio">Studio</span>
-        </h1>
-        <p class="hero-description">
-          Explore Cozy Core Diet recipes through playful comparison battles,
-          craving-based paths, and comfort-food discovery guided by BerryBelle.
-        </p>
+    <section class="hero section-shell" id="home" data-section="home">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">🍓 Cozy food meets playful design</p>
+          <h1><span>Welcome to</span>Berry Vibes Studio</h1>
 
-        <div class="hero-actions" aria-label="Featured actions">
-          <button class="pill-button berry" type="button" data-scroll-target="recipes">🍓 Explore recipes</button>
-          <button class="pill-button green" type="button" data-scroll-target="battles">⚔️ Start a food battle</button>
-          <button class="pill-button cream" type="button" data-scroll-target="about">📖 Discover CCD</button>
-          <button class="pill-button pink" type="button" data-scroll-target="berrybelle">🎀 Meet BerryBelle</button>
+          <p class="hero-description">
+            Explore Cozy Core Diet recipes through playful comparison battles,
+            craving-based discovery, and a colorful digital world guided by BerryBelle.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-pink" href="#recipes">🍓 Explore Recipes</a>
+            <a class="btn btn-green" href="#battles">⚔️ Start a Food Battle</a>
+            <a class="btn btn-cream" href="#about">📖 Discover CCD</a>
+            <a class="btn btn-soft" href="#berrybelle">🎀 Meet BerryBelle</a>
+          </div>
+        </div>
+
+        <div class="hero-mascot-wrap">
+          <div class="gingham-panel">
+            <div class="sparkle sparkle-one">✦</div>
+            <div class="sparkle sparkle-two">✦</div>
+            <div class="floating-heart">♥</div>
+
+            <div class="berrybelle" role="img" aria-label="BerryBelle, a smiling pink strawberry milk carton mascot">
+              <div class="carton-top"><div class="cap"></div></div>
+              <div class="carton-body">
+                <span class="eye eye-left"></span>
+                <span class="eye eye-right"></span>
+                <span class="cheek cheek-left"></span>
+                <span class="cheek cheek-right"></span>
+                <span class="smile"></span>
+                <div class="carton-strawberry">
+                  <span class="leaf l1"></span><span class="leaf l2"></span><span class="leaf l3"></span>
+                  <span class="seed s1"></span><span class="seed s2"></span><span class="seed s3"></span>
+                  <span class="seed s4"></span><span class="seed s5"></span>
+                </div>
+              </div>
+              <span class="arm arm-left"></span><span class="arm arm-right"></span>
+              <span class="leg leg-left"></span><span class="leg leg-right"></span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="hero-mascot-card reveal" data-delay="120">
-        <div class="gingham"></div>
-        <img src="images/berrybelle.jpg" alt="BerryBelle, a smiling pink strawberry milk carton mascot">
-        <span class="sparkle sparkle-one" aria-hidden="true">✦</span>
-        <span class="sparkle sparkle-two" aria-hidden="true">♡</span>
-        <button class="mascot-speech" id="mascot-speech" type="button" aria-label="Hear a BerryBelle message">
-          Tap me! 🍓
+      <div class="category-preview">
+        <button class="category-card pink-card" type="button" data-category-jump="breakfast">
+          <span class="category-icon">🥞</span>
+          <span><strong>Sweet Breakfast</strong><small>Bright, cozy bites to start your day.</small></span>
+          <span class="category-arrow">›</span>
+        </button>
+
+        <button class="category-card brown-card" type="button" data-category-jump="chocolate">
+          <span class="category-icon">🍫</span>
+          <span><strong>Chocolate Comfort</strong><small>Rich, warm treats for cozy moments.</small></span>
+          <span class="category-arrow">›</span>
+        </button>
+
+        <button class="category-card green-card" type="button" data-category-jump="drinks">
+          <span class="category-icon">☕</span>
+          <span><strong>Coffee-Shop Vibes</strong><small>Café favorites to sip and unwind.</small></span>
+          <span class="category-arrow">›</span>
         </button>
       </div>
     </section>
 
-    <section class="craving-section section-shell reveal" aria-labelledby="craving-title">
-      <div class="section-heading centered">
-        <p class="eyebrow">Choose your cozy path</p>
-        <h2 id="craving-title">What are you craving today?</h2>
-        <p>Pick a vibe and BerryBelle will filter the recipe shelf for you.</p>
+    <section class="cravings section-shell" aria-labelledby="cravings-title">
+      <div class="section-heading centered-heading">
+        <p class="eyebrow">Pick your vibe ✨</p>
+        <h2 id="cravings-title">What are you craving today?</h2>
+        <p>Choose a cozy path and jump straight into recipes that match the mood.</p>
       </div>
 
-      <div class="craving-grid" role="list">
-        <button class="craving-card pink-card" type="button" data-category="breakfast" role="listitem">
-          <span class="craving-illustration">🥞</span>
-          <span class="craving-copy"><strong>Sweet Breakfast</strong><small>Fluffy, warm starts.</small></span>
-          <span class="round-arrow" aria-hidden="true">›</span>
+      <div class="craving-grid">
+        <button class="craving-card craving-pink" type="button" data-category-jump="breakfast">
+          <span class="craving-emoji">🥞</span>
+          <span class="craving-copy"><strong>Sweet Breakfast</strong><small>Pancakes, French toast, cinnamon rolls, and fluffy morning favorites.</small></span>
+          <span class="round-arrow">→</span>
         </button>
 
-        <button class="craving-card chocolate-card" type="button" data-category="chocolate" role="listitem">
-          <span class="craving-illustration">🍫</span>
-          <span class="craving-copy"><strong>Chocolate Comfort</strong><small>Rich, cozy treats.</small></span>
-          <span class="round-arrow" aria-hidden="true">›</span>
+        <button class="craving-card craving-brown" type="button" data-category-jump="chocolate">
+          <span class="craving-emoji">🍫</span>
+          <span class="craving-copy"><strong>Chocolate Comfort</strong><small>Brownies, mug cakes, Oreo-inspired treats, and cocoa-rich bakes.</small></span>
+          <span class="round-arrow">→</span>
         </button>
 
-        <button class="craving-card green-card" type="button" data-category="drinks" role="listitem">
-          <span class="craving-illustration">☕</span>
-          <span class="craving-copy"><strong>Coffee-Shop Vibes</strong><small>Sip, savor, unwind.</small></span>
-          <span class="round-arrow" aria-hidden="true">›</span>
+        <button class="craving-card craving-green" type="button" data-category-jump="drinks">
+          <span class="craving-emoji">☕</span>
+          <span class="craving-copy"><strong>Coffee-Shop Vibes</strong><small>Warm mochas, iced lattes, cinnamon coffee, and cozy sips.</small></span>
+          <span class="round-arrow">→</span>
         </button>
 
-        <button class="craving-card orange-card" type="button" data-category="savory" role="listitem">
-          <span class="craving-illustration">🌯</span>
-          <span class="craving-copy"><strong>Savory &amp; Cozy</strong><small>Hearty everyday comfort.</small></span>
-          <span class="round-arrow" aria-hidden="true">›</span>
+        <button class="craving-card craving-orange" type="button" data-category-jump="savory">
+          <span class="craving-emoji">🌯</span>
+          <span class="craving-copy"><strong>Savory and Cozy</strong><small>Wraps, pizza, chicken bowls, bagel sandwiches, and hearty bites.</small></span>
+          <span class="round-arrow">→</span>
         </button>
       </div>
     </section>
 
-    <section class="recipes-section section-shell" id="recipes" aria-labelledby="recipes-title">
-      <div class="section-heading split reveal">
+    <section class="recipes section-shell" id="recipes" data-section="recipes">
+      <div class="section-heading">
         <div>
-          <p class="eyebrow">The recipe shelf</p>
-          <h2 id="recipes-title">Find your next cozy favorite</h2>
-          <p>Search, filter, save, and open any recipe card for the full vibe.</p>
+          <p class="eyebrow">🍓 Recipe discovery</p>
+          <h2>Explore the CCD recipe shelf</h2>
+          <p>Search, filter, favorite, and open a recipe card to see what to expect.</p>
         </div>
-        <div class="recipe-tools">
-          <label class="search-box" for="recipe-search">
+
+        <div class="recipe-controls">
+          <label class="search-field" for="recipe-search">
             <span aria-hidden="true">⌕</span>
-            <input id="recipe-search" type="search" placeholder="Search recipes…" autocomplete="off">
+            <span class="sr-only">Search recipes</span>
+            <input id="recipe-search" type="search" placeholder="Search recipes...">
           </label>
-          <button class="tiny-button" id="clear-filters" type="button">Reset</button>
         </div>
       </div>
 
-      <div class="filter-row reveal" id="filter-row" aria-label="Recipe filters">
-        <button class="filter-chip active" type="button" data-filter="all">All recipes</button>
-        <button class="filter-chip" type="button" data-filter="breakfast">Breakfast</button>
-        <button class="filter-chip" type="button" data-filter="chocolate">Chocolate</button>
-        <button class="filter-chip" type="button" data-filter="drinks">Drinks</button>
-        <button class="filter-chip" type="button" data-filter="savory">Savory</button>
-        <button class="filter-chip" type="button" data-filter="chilled">Chilled</button>
+      <div class="filter-row" id="recipe-filters" aria-label="Recipe filters">
+        <button class="filter-btn active" type="button" data-filter="all">🍓 All</button>
+        <button class="filter-btn" type="button" data-filter="breakfast">🥞 Breakfast</button>
+        <button class="filter-btn" type="button" data-filter="chocolate">🍫 Chocolate</button>
+        <button class="filter-btn" type="button" data-filter="drinks">☕ Drinks</button>
+        <button class="filter-btn" type="button" data-filter="savory">🌯 Savory</button>
       </div>
 
       <div class="recipe-grid" id="recipe-grid" aria-live="polite"></div>
-      <p class="empty-message" id="empty-message" hidden>No cozy matches yet. Try another search or category. 🍓</p>
+      <p class="empty-state" id="empty-state" hidden>No recipes matched that search. Try another cozy craving 🍓</p>
     </section>
 
-    <section class="battle-section section-shell" id="battles" aria-labelledby="battle-title">
-      <div class="battle-banner reveal">
-        <span aria-hidden="true">⚔️</span>
-        <strong>Recipe Battle</strong>
+    <section class="battle-zone section-shell" id="battles" data-section="battles">
+      <div class="section-heading centered-heading">
+        <p class="eyebrow">⚔️ Recipe battle</p>
+        <h2>Choose your cozy winner</h2>
+        <p>Compare a CCD creation with a familiar bakery, café, or diner-style favorite.</p>
       </div>
 
-      <div class="section-heading centered reveal">
-        <p class="eyebrow">No food shame. Just playful comparison.</p>
-        <h2 id="battle-title"><span id="battle-heading-left">CCD Cinnamon Roll</span> <em>vs</em> <span id="battle-heading-right">Bakery Style Roll</span></h2>
-      </div>
-
-      <div class="battle-board reveal" id="battle-board">
-        <article class="battle-card left-battle" id="left-battle-card">
-          <div class="battle-image-wrap">
-            <img id="left-battle-image" src="images/ccd-cinnamon-roll.jpg" alt="CCD microwave cinnamon roll">
-          </div>
-          <h3 id="left-battle-title">CCD Microwave Cinnamon Roll</h3>
-          <ul id="left-battle-points">
-            <li>Soft and fluffy</li>
-            <li>Cozy cinnamon swirl</li>
-            <li>Homemade in minutes</li>
-          </ul>
-          <button class="vote-button berry" id="vote-left" type="button">🍓 Choose CCD</button>
-          <div class="vote-meter" aria-hidden="true"><span id="left-meter"></span></div>
-          <p class="vote-percent" id="left-percent">50%</p>
+      <div class="battle-board" id="battle-board">
+        <article class="battle-card battle-left">
+          <span class="battle-label">CCD PICK</span>
+          <div class="battle-food-icon" id="left-battle-icon">🌀</div>
+          <h3 id="left-battle-title">CCD Microwave Cinnamon Rolls</h3>
+          <ul id="left-battle-points"></ul>
+          <button class="btn btn-pink battle-choice" type="button" data-choice="left">🍓 Choose CCD</button>
         </article>
 
-        <div class="versus-badge" aria-hidden="true">VS</div>
-
-        <article class="battle-card right-battle" id="right-battle-card">
-          <div class="battle-image-wrap">
-            <img id="right-battle-image" src="images/bakery-cinnamon-roll.jpg" alt="Bakery style cinnamon roll">
-          </div>
-          <h3 id="right-battle-title">Bakery Style Roll</h3>
-          <ul id="right-battle-points">
-            <li>Larger portion</li>
-            <li>Sweet icing glaze</li>
-            <li>Classic bakery comfort</li>
-          </ul>
-          <button class="vote-button green" id="vote-right" type="button">🥐 Choose Bakery</button>
-          <div class="vote-meter" aria-hidden="true"><span id="right-meter"></span></div>
-          <p class="vote-percent" id="right-percent">50%</p>
-        </article>
-      </div>
-
-      <div class="battle-footer reveal">
-        <div class="mini-berrybelle">
-          <img src="images/berrybelle.jpg" alt="BerryBelle cheering">
-          <p id="battle-message">Battle time! Pick the one matching your mood.</p>
+        <div class="battle-center">
+          <div class="vs-badge">VS</div>
+          <div class="berrybelle-mini" aria-hidden="true">🍓</div>
+          <p id="battle-message">BerryBelle says: pick the vibe that sounds best to you!</p>
+          <button class="text-button" id="next-battle" type="button">Next battle ↻</button>
         </div>
-        <button class="pill-button cream" id="next-battle" type="button">Shuffle battle ✨</button>
+
+        <article class="battle-card battle-right">
+          <span class="battle-label alt-label">CLASSIC PICK</span>
+          <div class="battle-food-icon" id="right-battle-icon">🥐</div>
+          <h3 id="right-battle-title">Bakery Style Cinnamon Roll</h3>
+          <ul id="right-battle-points"></ul>
+          <button class="btn btn-green battle-choice" type="button" data-choice="right">🥐 Choose Bakery</button>
+        </article>
+      </div>
+
+      <div class="battle-results" aria-live="polite">
+        <div><span>CCD votes</span><strong id="left-votes">0</strong></div>
+        <div><span>Classic votes</span><strong id="right-votes">0</strong></div>
       </div>
     </section>
 
-    <section class="about-section section-shell" id="about" aria-labelledby="about-title">
-      <div class="about-card reveal">
+    <section class="about section-shell" id="about" data-section="about">
+      <div class="about-layout">
         <div class="about-copy">
-          <p class="eyebrow">About Cozy Core Diet</p>
-          <h2 id="about-title">Comfort food, remixed with creativity</h2>
+          <p class="eyebrow">📖 About CCD</p>
+          <h2>Comfort food, redesigned through a personal creative system.</h2>
           <p>
-            CCD is Danielle’s personal recipe world: cozy, flexible, playful, and built around familiar foods.
-            The goal is not to label one choice as “good” and another as “bad.” It is to explore flavor,
-            texture, convenience, and creativity through choices that still feel comforting.
+            Cozy Core Diet (CCD) is the recipe world behind Berry Vibes Studio.
+            The project treats food discovery like an interface: recipes become cards,
+            cravings become navigation paths, and comparisons become playful design moments.
           </p>
-          <div class="about-values">
-            <span>♡ Non-restrictive</span>
-            <span>✦ Personal</span>
-            <span>🍓 Playful</span>
-            <span>☕ Comfort-first</span>
+          <p>
+            The goal is not to make food feel clinical. It is to make familiar comfort
+            feel expressive, visual, and interactive.
+          </p>
+
+          <div class="about-tags">
+            <span>Interface</span><span>Play</span><span>Game</span><span>Illustration</span><span>Usability</span>
           </div>
         </div>
-        <div class="about-visual" aria-hidden="true">
-          <div class="orbit orbit-one">🥞</div>
-          <div class="orbit orbit-two">🍫</div>
-          <div class="orbit orbit-three">☕</div>
-          <div class="orbit orbit-four">🌯</div>
-          <div class="center-heart">♡</div>
+
+        <div class="about-visual">
+          <div class="process-card">
+            <span class="process-number">01</span><strong>Choose a craving</strong><small>Start with mood instead of a linear menu.</small>
+          </div>
+          <div class="process-card">
+            <span class="process-number">02</span><strong>Explore a recipe</strong><small>Open cards for flavor, texture, and ingredient previews.</small>
+          </div>
+          <div class="process-card">
+            <span class="process-number">03</span><strong>Battle a classic</strong><small>Compare familiar experiences in a playful way.</small>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="berrybelle-section section-shell" id="berrybelle" aria-labelledby="berrybelle-title">
-      <div class="berrybelle-profile reveal">
-        <div class="profile-image-wrap">
-          <img src="images/berrybelle.jpg" alt="BerryBelle, the Berry Vibes Studio mascot">
+    <section class="berrybelle-section section-shell" id="berrybelle" data-section="berrybelle">
+      <div class="berrybelle-feature">
+        <div class="berrybelle-stage">
+          <div class="berrybelle berrybelle-large" role="img" aria-label="BerryBelle mascot">
+            <div class="carton-top"><div class="cap"></div></div>
+            <div class="carton-body">
+              <span class="eye eye-left"></span><span class="eye eye-right"></span>
+              <span class="cheek cheek-left"></span><span class="cheek cheek-right"></span><span class="smile"></span>
+              <div class="carton-strawberry">
+                <span class="leaf l1"></span><span class="leaf l2"></span><span class="leaf l3"></span>
+                <span class="seed s1"></span><span class="seed s2"></span><span class="seed s3"></span>
+                <span class="seed s4"></span><span class="seed s5"></span>
+              </div>
+            </div>
+            <span class="arm arm-left"></span><span class="arm arm-right"></span>
+            <span class="leg leg-left"></span><span class="leg leg-right"></span>
+          </div>
         </div>
-        <div class="profile-copy">
-          <p class="eyebrow">Meet the mascot</p>
-          <h2 id="berrybelle-title">BerryBelle makes every choice feel like play</h2>
+
+        <div class="berrybelle-copy">
+          <p class="eyebrow">🎀 Meet the mascot</p>
+          <h2>BerryBelle makes the interface feel like a tiny world.</h2>
           <p>
-            BerryBelle is a strawberry-milk-carton guide who welcomes visitors, recommends craving paths,
-            shares recipe tips, and celebrates every food-battle vote. She represents the soft, cheerful,
-            and quietly confident personality of Berry Vibes Studio.
+            BerryBelle is the studio guide: part mascot, part narrator, and part playful signpost.
+            She appears beside recipe tips, battle prompts, and navigation choices.
           </p>
-          <button class="pill-button berry" id="berrybelle-tip-button" type="button">Ask BerryBelle for a tip 🍓</button>
-          <blockquote id="berrybelle-tip">“Pick the recipe that sounds delicious today. Cozy is allowed to change.”</blockquote>
+
+          <div class="tip-bubble" id="tip-bubble" aria-live="polite">“Pick the craving that sounds the most fun first.”</div>
+          <button class="btn btn-pink" id="new-tip-button" type="button">✨ Ask BerryBelle for a tip</button>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="brand footer-brand" href="#top"><span aria-hidden="true">🍓</span> Berry Vibes Studio</a>
-    <p>Designed and coded by Danielle Julian · ATCM 2335 Final Project</p>
-    <a href="#top">Back to top ↑</a>
-  </footer>
-
-  <dialog class="recipe-modal" id="recipe-modal" aria-labelledby="modal-title">
-    <button class="modal-close" id="modal-close" type="button" aria-label="Close recipe">×</button>
-    <div class="modal-content">
-      <div class="modal-image-column">
-        <img id="modal-image" src="" alt="">
-        <div class="berry-tip-card">
-          <img src="images/berrybelle.jpg" alt="BerryBelle">
-          <div><strong>BerryBelle’s tip</strong><p id="modal-tip"></p></div>
-        </div>
+  <dialog class="recipe-modal" id="recipe-modal">
+    <div class="modal-header">
+      <div>
+        <p class="eyebrow" id="modal-category">Recipe</p>
+        <h2 id="modal-title">Recipe Title</h2>
       </div>
-      <div class="modal-copy-column">
-        <p class="eyebrow" id="modal-category"></p>
-        <h2 id="modal-title"></h2>
-        <p class="modal-subtitle" id="modal-subtitle"></p>
+      <button class="modal-close" id="modal-close" type="button" aria-label="Close recipe details">×</button>
+    </div>
 
-        <section class="modal-panel expect-panel">
+    <div class="modal-grid">
+      <div class="modal-food-panel">
+        <div class="modal-food-icon" id="modal-icon">🥞</div>
+        <p id="modal-description"></p>
+      </div>
+
+      <div class="modal-info">
+        <section class="modal-box">
           <h3>What to expect</h3>
           <p id="modal-expect"></p>
         </section>
 
-        <section class="modal-panel ingredients-panel">
+        <section class="modal-box">
           <h3>Ingredient preview</h3>
           <ul id="modal-ingredients"></ul>
         </section>
 
-        <div class="modal-tags" id="modal-tags"></div>
-        <button class="pill-button berry modal-save" id="modal-save" type="button">♡ Save recipe</button>
+        <section class="modal-box berry-tip-box">
+          <h3>🍓 BerryBelle's tip</h3>
+          <p id="modal-tip"></p>
+        </section>
       </div>
     </div>
   </dialog>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div>
+      <strong>🍓 Berry Vibes Studio</strong>
+      <span>Designed as an interactive final project for Internet Studio 1.</span>
+    </div>
+    <a href="#top">Back to top ↑</a>
+  </footer>
 </body>
 </html>
